@@ -1,4 +1,4 @@
-# 🟩 Punnch start neovim configuration
+# 🟩 Punnch's start neovim configuration
 
 ## 🎨 Visuals
 
