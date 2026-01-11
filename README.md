@@ -1,7 +1,7 @@
 # 🟩 Punnch start neovim configuration
 
-## Visuals
+## 🎨 Visuals
 
-- *Gruvbox material* theme
-- *Lualine*
-- *Neo-tree*
+- **Gruvbox material** theme
+- **Lualine**
+- **Neo-tree**
