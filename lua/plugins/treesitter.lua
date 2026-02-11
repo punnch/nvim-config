@@ -9,4 +9,4 @@ return {
       callback = function() vim.treesitter.start() end,
     })
   end
-} 
+}
