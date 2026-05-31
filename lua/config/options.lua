@@ -1,8 +1,5 @@
 local o = vim.opt
 
--- empty space character
--- o.fillchars = { eob = " " }
-
 o.termguicolors = true
 o.number = true
 o.relativenumber = true
@@ -13,7 +10,7 @@ o.sidescrolloff = 8
 o.wrap = false
 o.colorcolumn = "100"
 o.cmdheight = 1
-o.showmode = false
+o.showmode = true
 o.pumheight = 12
 o.splitright = true
 o.splitbelow = true
@@ -49,6 +46,8 @@ o.clipboard = "unnamedplus"
 o.laststatus = 3
 o.list = true
 o.listchars = { tab = "  ", trail = ".", nbsp = "_" }
+
+vim.g.mapleader = " "
 
 -- diagnostics
 vim.diagnostic.config({

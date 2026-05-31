@@ -1,20 +1,8 @@
 local map = vim.keymap.set
 
--- CTRL+S save
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-
--- Better terminal navigation
-map("t", "<C-h>", "<C-\\><C-N><C-w>h")
-map("t", "<C-j>", "<C-\\><C-N><C-w>j")
-map("t", "<C-k>", "<C-\\><C-N><C-w>k")
-map("t", "<C-l>", "<C-\\><C-N><C-w>l")
-map("t", "<Esc>", "<C-\\><C-n>")
-
--- Resize with arrows
-map("n", "<C-Up>", ":resize +1<CR>")
-map("n", "<C-Down>", ":resize -1<CR>")
-map("n", "<C-Left>", ":vertical resize -1<CR>")
-map("n", "<C-Right>", ":vertical resize +1<CR>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save file" })
+map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit all" })
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear search highlight" })
 
 -- Window movement
 map("n", "<C-k>", ":wincmd k<CR>")
@@ -22,7 +10,18 @@ map("n", "<C-j>", ":wincmd j<CR>")
 map("n", "<C-h>", ":wincmd h<CR>")
 map("n", "<C-l>", ":wincmd l<CR>")
 
-map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear search highlight" })
+-- Better terminal navigation
+map("t", "<C-h>", "<cmd>wincmd h<CR>")
+map("t", "<C-j>", "<cmd>wincmd j<CR>")
+map("t", "<C-k>", "<cmd>wincmd k<CR>")
+map("t", "<C-l>", "<cmd>wincmd l<CR>")
+map("t", "<Esc>", "<C-\\><C-n>")
+
+-- Resize with arrows
+map("n", "<C-Up>", ":resize +1<CR>")
+map("n", "<C-Down>", ":resize -1<CR>")
+map("n", "<C-Left>", ":vertical resize -1<CR>")
+map("n", "<C-Right>", ":vertical resize +1<CR>")
 
 -- diagnostics
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
