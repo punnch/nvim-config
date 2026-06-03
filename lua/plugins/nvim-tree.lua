@@ -8,6 +8,17 @@ return {
 	config = function()
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
+
+		require("nvim-web-devicons").setup({
+			override_by_extension = {
+				["go"] = {
+					icon = "go",
+					color = "#00ADD8",
+					name = "Go",
+				},
+			},
+		})
+
 		require("nvim-tree").setup({
 			hijack_directories = {
 				enable = true,
