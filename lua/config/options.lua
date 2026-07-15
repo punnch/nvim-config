@@ -1,10 +1,11 @@
 local o = vim.opt
 
+o.guicursor = "a:block"
 o.termguicolors = true
 o.number = true
-o.relativenumber = true
+-- o.relativenumber = true
 o.signcolumn = "yes"
-o.cursorline = true
+o.cursorline = false
 o.scrolloff = 8
 o.sidescrolloff = 8
 o.wrap = false

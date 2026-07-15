@@ -33,7 +33,6 @@ return {
 					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 
-					-- chat gpt start
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
@@ -54,7 +53,7 @@ return {
 						end
 					end, { "i", "s" }),
 				}),
-				-- chat gpt ended
+
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.

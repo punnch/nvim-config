@@ -17,4 +17,4 @@ require("lazy").setup("plugins")
 require("config.autocmds")
 require("config.mappings")
 
-vim.cmd.colorscheme("base46-gruvbox")
+-- vim.cmd.colorscheme("base46-default-dark")

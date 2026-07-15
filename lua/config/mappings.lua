@@ -1,8 +1,10 @@
 local map = vim.keymap.set
 
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save file" })
 map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit all" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear search highlight" })
+
+-- Explorer
+map("n", "<leader>e", "<cmd>Explore<CR>", {})
 
 -- Window movement
 map("n", "<C-k>", ":wincmd k<CR>")
@@ -24,6 +26,6 @@ map("n", "<C-Left>", ":vertical resize -1<CR>")
 map("n", "<C-Right>", ":vertical resize +1<CR>")
 
 -- diagnostics
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
