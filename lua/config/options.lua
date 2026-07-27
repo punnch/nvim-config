@@ -1,15 +1,13 @@
 local o = vim.opt
 
-o.guicursor = "a:block"
+-- o.guicursor = "a:block"
 o.termguicolors = true
 o.number = true
--- o.relativenumber = true
-o.signcolumn = "yes"
+o.relativenumber = true
 o.cursorline = false
 o.scrolloff = 8
 o.sidescrolloff = 8
 o.wrap = false
-o.colorcolumn = "100"
 o.cmdheight = 1
 o.showmode = true
 o.pumheight = 12
@@ -32,7 +30,7 @@ o.undofile = true
 o.swapfile = false
 o.backup = false
 o.updatetime = 200
-o.timeoutlen = 300
+-- o.timeoutlen = 300
 
 o.completeopt = { "menu", "menuone", "noselect" }
 o.shortmess:append("c")
@@ -42,9 +40,7 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldenable = false
 o.foldlevel = 99
 
-o.mouse = "a"
 o.clipboard = "unnamedplus"
-o.laststatus = 3
 o.list = true
 o.listchars = { tab = "  ", trail = ".", nbsp = "_" }
 
@@ -52,9 +48,9 @@ vim.g.mapleader = " "
 
 -- diagnostics
 vim.diagnostic.config({
-	virtual_text = true,
-	signs = true,
-	underline = true,
-	update_in_insert = false,
-	severity_sort = true,
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
 })
