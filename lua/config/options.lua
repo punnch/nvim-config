@@ -2,6 +2,7 @@ local o = vim.opt
 
 -- o.guicursor = "a:block"
 o.termguicolors = true
+o.colorcolumn = "100"
 o.number = true
 o.relativenumber = true
 o.cursorline = false
@@ -30,7 +31,7 @@ o.undofile = true
 o.swapfile = false
 o.backup = false
 o.updatetime = 200
--- o.timeoutlen = 300
+o.timeoutlen = 300
 
 o.completeopt = { "menu", "menuone", "noselect" }
 o.shortmess:append("c")
@@ -48,9 +49,9 @@ vim.g.mapleader = " "
 
 -- diagnostics
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+	virtual_text = true,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 })
